@@ -35,6 +35,11 @@ header img {
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
+.vidborder {
+    width: 80%;
+    height: 80%;
+}
+
 .tagline {
     background-color: #f2b84d;
     color: #000;
@@ -287,3 +292,4 @@ footer p {
         width: 100%;
     }
 }
+
