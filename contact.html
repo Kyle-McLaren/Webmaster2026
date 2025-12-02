@@ -6,6 +6,12 @@
     <title>Contact | South Cypress Historical Society</title>
     <link rel="stylesheet" href="pages/styles.css" type="text/css">
     <link rel="icon" href="photos/favicon.png">
+    <script>
+    function handleFormSubmit(event) {
+        event.preventDefault();
+        alert("Your message has been submitted! Thank you for reaching out.");
+    }
+    </script>
 </head>
 <body>
     <header>
@@ -30,19 +36,31 @@
 
         <h1>South Cypress Historical Society</h1>
         <h2 class="tagline">Preserving and Sharing the Rich History of Southern Cypress County</h2>
-        <img src="images/main.jpg" alt="Historic Cypress County landmark or landscape">
+        <img src="photos/main.png" alt="Historic Cypress County landscape">
     </header>
+        <h1>Contact Information</h1>
+        <h3>Our Email</h3>
+        <p>info@schs.com</p>
+        <h3>Our Number</h3>
+        <p>1-555-HBL-SCHS (1-555-425-7247)</p>
 
-        <h1> Contact Information</h1>
-        <h3> Our Email</h3>
-        <p> southcypresssociety@pmail.com</p>
-        <h3> Our Number</h3>
-        <p> 1-800-SCHS</p>
-        
+        <form id="contactForm" class="contact-form" onsubmit="handleFormSubmit(event)">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" placeholder="Maxwell Cypress" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" placeholder="maxwellcypress@thebestemail.com" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" placeholder="I have a very important question..." rows="5" required></textarea>
+
+            <button type="submit" class="button">Send Message</button>
+        </form>
     </body>
     <footer>
         <p>&copy; 2025 South Cypress Historical Society | Preserving South Cypress's Past for Yesterday, Today, and Tomorrow</p>
-        <p><a href="https://facebook.com/southbrevardhistory/" target="_blank">Follow us on Facebook</a></p>
+        <p><a href="https://facebook.com/southCypresshistory/" target="_blank">Follow us on Facebook</a></p>
+        <a href="site-resources.html" class="button">Site Resources</a>
     </footer>
 </body>
 </html>
