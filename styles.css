@@ -15,15 +15,16 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
     text-align: center;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    font-size: 30px;
 }
 
 p {
-    font-size: 15px;
+    font-size: 20px;
 }
 
 header {
     padding: 20px;
-    background-color: #bf6e26;
+    background-color: #282968;
     color: #fff;
 }
 
@@ -45,7 +46,7 @@ header img {
     background-color: #f2b84d;
     color: #000;
     padding: 10px;
-    font-size: 17px;
+    font-size: 20px;
     font-style: italic;
     border-radius: 5px;
     margin: 10px auto 20px;
@@ -54,13 +55,15 @@ header img {
 }
 
 .calltoaction {
-    background-color: #f4e9db;
+    background-color: #080807;
     border-left: 6px solid #bf6e26;
     padding: 20px 25px;
     margin: 30px 0;
     border-radius: 8px;
 }
-
+.calltoaction p{ 
+    color:#f9f5e7; 
+}
 nav ul {
     list-style: none;
     padding: 0;
@@ -71,11 +74,12 @@ nav ul {
 nav ul li {
     display: inline-block;
     margin: 0 10px;
+
 }
 
 nav a {
     text-decoration: none;
-    color: #0d0d0d;
+    color: #fffbfb;
     padding: 10px 14px;
     display: inline-block;
     font-weight: bold;
@@ -90,7 +94,7 @@ nav a:hover {
 
 nav a.active {
     background-color: #f2b84d;
-    color: #000;
+    color: #ffffff;
 }
 
 .search-form {
@@ -106,7 +110,7 @@ nav a.active {
     padding: 6px 10px;
     border-radius: 20px 0 0 20px;
     font-family: Georgia, Garamond, "Libre Baskerville", serif;
-    font-size: 14px;
+    font-size: 20px;
     outline: none;
     width: 140px;
 }
@@ -136,7 +140,9 @@ main {
 main section {
     margin-bottom: 40px;
 }
-
+section li {
+    font-size: 18px;
+}
 ul {
     list-style-type: disc;
     margin-left: 40px;
@@ -153,7 +159,7 @@ a:hover {
 }
 
 main section:last-of-type {
-    background-color: #b7b79a;
+    background-color: #2b2b2b;
     padding: 20px;
     border-radius: 8px;
     text-align: center;
@@ -166,10 +172,10 @@ main section:last-of-type {
     padding: 8px 14px;
     border-radius: 5px;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 17px;
     display: inline-block;
     align-content: center;
-    transition: background 0.2s ease, transform 0.2s ease;
+    transition: 0.2s ease, transform 0.2s ease;
 }
 
 .button:hover {
@@ -225,7 +231,7 @@ main section:last-of-type {
 }
 
 .resource-card p {
-    font-size: 14px;
+    font-size: 17px;
     margin-bottom: 15px;
     line-height: 1.4;
     color: #000;
@@ -237,9 +243,9 @@ main section:last-of-type {
     padding: 8px 14px;
     border-radius: 5px;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 17px;
     display: inline-block;
-    transition: background 0.2s ease, transform 0.2s ease;
+    transition: 0.2s ease, transform 0.2s ease;
 }
 
 .resource-card .button:hover {
