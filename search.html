@@ -9,34 +9,101 @@
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="resources.html">Resources</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="articles.html" class="active">Articles</a></li>
-                <li><a href="add.html">Add a Resource</a></li>
-                <li><a href="help.html">Help</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li>
-                    <form action="search.html" method="get" class="search-form">
-                        <input type="text" name="query" placeholder="Search our site..." required>
-                        <button type="submit">Search</button>
-                    </form>
-                </li>
-            </ul>
-        </nav>
+      <nav>
+        <ul class="nav-bar">
+            <li class="logo-item">
+                <img src="photos/favicon.png" class="logo" alt="Logo">
+            </li>
+
+            <li><a href="home.html" class="active">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="articles.html">Articles</a></li>
+            <li><a href="add.html">Add a Resource</a></li>
+            <li><a href="help.html">Help</a></li>
+            <li><a href="contact.html">Contact</a></li>
+
+            <li class="search">
+              <form action="search.html" method="get" class="search-form">
+                <input type="text" name="query" placeholder="Search our site..." required>
+                <button type="submit">Search</button>
+            </form>
+          </li>
+        </ul>
+      </nav>
     </header>
+
     <main>
+
+        <h2>Search Results</h2>
+
+      <div id="results"></div>
+
+      <div id="no-results" style="display:none;">
         <h2>Huh!</h2>
-        <p>Looks like what you are searching for doesn't exist on our site yet. Add it to our list of resources to aid in future searches!</p>
+        <p>Looks like what you are searching for doesn't exist on our site yet!</p>
+        <p>Add it to our list of resources to help in future searches!</p>
         <a href="add.html" class="button">Add a Resource</a>
+      </div>
     </main>
+
     <footer>
-        <p>&copy; 2025 South Brevard Historical Society | Preserving South Brevard's Past for Yesterday, Today, and Tomorrow</p>
+        <p>&copy; 2026 South Brevard Historical Society | Preserving South Brevard's Past for Yesterday, Today, and Tomorrow</p>
         <p><a href="https://facebook.com/southBrevardhistory/" target="_blank">Follow us on Facebook</a></p>
         <a href="site-resources.html" class="button">Site Resources</a>
     </footer>
+
+<script>
+
+const resources = [
+
+{ name: "Community Resources", url: "resources.html", keywords: "help support services assistance shelters libraries schools hospitals healthcare medical daycares hiring jobs " },
+
+{ name: "Community Events", url: "events.html", keywords: "events meetings workshops community things-to-do" },
+
+{ name: "Historical Articles", url: "articles.html", keywords: "history brevard archives research" },
+
+{ name: "Contact Us", url: "contact.html", keywords: "contact email phone support address location" },
+
+{ name: "About the Society", url: "about.html", keywords: "about mission history society sbhs" }
+
+];
+
+const params = new URLSearchParams(window.location.search);
+const query = params.get("query")?.toLowerCase();
+
+const resultsDiv = document.getElementById("results");
+const noResults = document.getElementById("no-results");
+
+if(query){
+
+let matches = resources.filter(r =>
+r.name.toLowerCase().includes(query) ||
+r.keywords.includes(query)
+);
+
+if(matches.length > 0){
+
+matches.forEach(r => {
+
+let result = document.createElement("p");
+
+result.innerHTML = `<a href="${r.url}">${r.name}</a>`;
+
+resultsDiv.appendChild(result);
+
+});
+
+} else {
+
+noResults.style.display = "block";
+
+}
+
+}
+
+</script>
+
 </body>
 </html>
